@@ -1,6 +1,6 @@
 FROM node:latest AS build
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
 RUN ls -la
 RUN npm install -g npm@11.12.1
 RUN npm ci

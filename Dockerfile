@@ -1,7 +1,7 @@
-FROM node:22-alpine AS build
+FROM node:latest AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm i
+RUN npm ci
 COPY . .
 RUN npm run build
 
